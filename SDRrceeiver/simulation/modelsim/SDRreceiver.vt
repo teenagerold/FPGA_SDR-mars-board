@@ -1,0 +1,187 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "09/01/2017 21:18:39"
+                                                                                
+// Verilog Test Bench template for design : SDRreceiver
+// 
+// Simulation tool : ModelSim (Verilog)
+// 
+
+`timescale 1ns/1ns
+module SDRreceiver_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg [9:0] adc_data;
+reg clk;
+reg clk_fir;
+reg rst_n;
+// wires                                               
+wire signed [31:0]  i_out;
+wire signed [31:0]  q_out;
+
+// assign statements (if any)                          
+SDRreceiver i1 (
+// port map - connection between master ports and signals/registers   
+	.adc_data(adc_data),
+	.clk(clk),
+	.clk_fir(clk_fir),
+	.i_out(i_out),
+	.q_out(q_out),
+	.rst_n(rst_n)
+);
+
+
+parameter clk_period = 50;	//20MHz
+parameter clk_fir_period =10000;	//100KHz
+parameter data_num=20000;  //仿真数据长度
+parameter time_sim=data_num*clk_period; //仿真时间
+
+//---------------generate clk--------------------//
+initial                                                
+begin                                                  
+// code that executes only once                        
+	clk = 0;
+	forever	#(clk_period/2)	
+	clk = ~clk;// insert code here --> begin                                    
+end
+
+initial                                                
+begin                                                  
+// code that executes only once                        
+	clk_fir = 0;
+	forever	#(clk_fir_period/2)	
+	clk_fir = ~clk_fir;// insert code here --> begin                                    
+end
+
+
+//----------------------generate reset signal--------------//
+task task_reset;
+begin
+	rst_n = 0;
+	repeat(2) @(negedge clk);
+	rst_n = 1;
+	//set simulation time_sim
+	#time_sim $finish;
+end
+endtask
+
+//---------------------------------------
+//system initialization
+task task_sysinit;
+begin
+end
+endtask
+
+
+//----------------------------------------
+//testbench of the RTL
+initial
+begin
+	task_sysinit;
+	task_reset;
+
+end
+
+
+//从外部TX文件(GenerateAM.txt)读入数据作为测试激励,相当于ADC采集的数据
+integer Pattern;
+reg [9:0] stimulus[1:data_num];
+initial
+begin
+   //文件必须放置在"工程目录\simulation\modelsim"路径下
+	$readmemb("GenerateAM.txt",stimulus);
+	Pattern=0;
+	repeat(data_num)
+		begin
+			Pattern=Pattern+1;
+			adc_data=stimulus[Pattern];
+			#clk_period;
+		end
+end
+
+
+
+//将仿真数据I_out写入外部TXT文件中(I_out_FPGA.txt)
+integer file_i_out;
+initial 
+begin
+   //文件放置在"工程目录\simulation\modelsim"路径下                                                  
+	file_i_out = $fopen("i_out_FPGA.txt");
+	if(!file_i_out)
+		begin
+			$display("could not open file!");
+			$finish;
+		end
+end
+
+
+//actual sampling is 50kHz, so divide sample_clk on 2
+//this is because FIR makes decimation on 2
+reg sample_clk_2 = 1'b0;
+always @(posedge clk_fir)
+	sample_clk_2 <= ~sample_clk_2;
+
+wire rst_write;
+assign rst_write = sample_clk_2 &rst_n;//产生写入时钟信号，复位状态时不写入数据
+
+wire signed [31:0]  i_out_s; //将i_out转化为有符号数据
+assign i_out_s=i_out;
+
+always @(posedge rst_write)
+	$fdisplay(file_i_out,"%d",i_out_s);
+
+
+//将仿真数据q_out写入外部TXT文件中(q_out_FPGA.txt)
+integer file_q_out;
+initial 
+begin
+   //文件放置在"工程目录\simulation\modelsim"路径下                                                  
+	file_q_out = $fopen("q_out_FPGA.txt");
+	if(!file_q_out)
+		begin
+			$display("could not open file!");
+			$finish;
+		end
+end
+
+wire signed [31:0]  q_out_s; //将q_out转化为有符号数据
+assign q_out_s=q_out;
+
+always @(posedge rst_write )
+	$fdisplay(file_q_out,"%d",q_out_s);
+
+
+
+
+
+
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)s                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+                                                       
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule

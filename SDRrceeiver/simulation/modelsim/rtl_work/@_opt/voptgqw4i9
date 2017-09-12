@@ -1,0 +1,558 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\F\FPGAcode\SDR-radio-receiver\DE0-nano\SDRrceeiver\simulation\modelsim
+T_opt
+VjO<<_Xa]e86]AzI;:nQN40
+04 19 4 work SDRreceiver_vlg_tst fast 0
+=1-9c2a70d8f0f5-59ad503b-17c-16d8
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OE;O;10.1a;51
+valtera_avalon_sc_fifo
+ILYTELocm]=XVk5R?2KLY31
+VjOzUMS5nAQIa6?lLKEfID0
+Z1 dE:\F\FPGAcode\SDR-radio-receiver\DE0-nano\SDRrceeiver\simulation\modelsim
+Z2 w1504524879
+8E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/altera_avalon_sc_fifo.v
+FE:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/altera_avalon_sc_fifo.v
+L0 21
+Z3 OE;L;10.1a;51
+r1
+31
+o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 Q9Ad8[ZfP]b8LPekIfc5L3
+!s85 0
+!s108 1504530486.672000
+!s107 E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/altera_avalon_sc_fifo.v|
+!s90 -reportprogress|300|E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/altera_avalon_sc_fifo.v|
+Eauk_dspip_avalon_streaming_controller_hpfir
+R2
+Z4 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+R1
+Z7 8E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd
+Z8 FE:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd
+l0
+L41
+VROmeVW[jYg2KGSg4O=:RF1
+Z9 OE;C;10.1a;51
+32
+Z10 !s108 1504530487.262000
+Z11 !s90 -reportprogress|300|E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd|
+Z12 !s107 E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd|
+Z13 tExplicit 1
+!s100 :Km6hF?2SIGhCI]CCRB8R3
+!i10b 1
+Astruct
+R4
+R5
+R6
+DEx4 work 43 auk_dspip_avalon_streaming_controller_hpfir 0 22 ROmeVW[jYg2KGSg4O=:RF1
+l72
+L64
+VBCkU6K<nhD[k67F>89OS20
+R9
+32
+R10
+R11
+R12
+R13
+!s100 d^`@P<cO?Ae3FI>HI]@mC0
+!i10b 1
+Eauk_dspip_avalon_streaming_sink_hpfir
+R2
+Z14 DPx9 altera_mf 20 altera_mf_components 0 22 C5S@9S9n:^]LGZjFEV?FT3
+Z15 DPx4 work 24 auk_dspip_math_pkg_hpfir 0 22 UmiNfbk=dUE>id[0TliZd2
+Z16 DPx4 work 23 auk_dspip_lib_pkg_hpfir 0 22 KF5<2__lA5m0S=9Kh?YRm3
+Z17 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R5
+R6
+R1
+Z18 8E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd
+Z19 FE:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd
+l0
+L56
+V2`Rb3^XBRJlldK4VKK7m63
+R9
+32
+Z20 !s108 1504530487.465000
+Z21 !s90 -reportprogress|300|E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd|
+Z22 !s107 E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd|
+R13
+!s100 X=?PHjSK;PSkCm[IYA^@02
+!i10b 1
+Artl
+R14
+R15
+R16
+R17
+R5
+R6
+DEx4 work 37 auk_dspip_avalon_streaming_sink_hpfir 0 22 2`Rb3^XBRJlldK4VKK7m63
+l164
+L106
+V36nQ247<N^8`eRdmo?]cD3
+R9
+32
+R20
+R21
+R22
+R13
+!s100 d1`Vk5Z@a]Q=KDU3W=B]H3
+!i10b 1
+Eauk_dspip_avalon_streaming_source_hpfir
+R2
+R15
+R14
+R17
+R5
+R6
+R1
+Z23 8E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_source_hpfir.vhd
+Z24 FE:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_source_hpfir.vhd
+l0
+L70
+VC>9`dejCC=72f3O36F6PI0
+R9
+32
+Z25 !s108 1504530487.751000
+Z26 !s90 -reportprogress|300|E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_source_hpfir.vhd|
+Z27 !s107 E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_source_hpfir.vhd|
+R13
+!s100 z61=GE?nV4baRO4^14Czd2
+!i10b 1
+Artl
+R15
+R14
+R17
+R5
+R6
+DEx4 work 39 auk_dspip_avalon_streaming_source_hpfir 0 22 C>9`dejCC=72f3O36F6PI0
+l190
+L109
+V52jh`HgZ_iY];R<9UnMS<0
+R9
+32
+R25
+R26
+R27
+R13
+!s100 9Dmb32DBg2LcB];:ibk821
+!i10b 1
+Pauk_dspip_lib_pkg_hpfir
+R15
+R17
+R5
+R6
+R2
+R1
+8E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_lib_pkg_hpfir.vhd
+FE:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_lib_pkg_hpfir.vhd
+l0
+L22
+VKF5<2__lA5m0S=9Kh?YRm3
+R9
+32
+R13
+!s100 Q<H^mQVRzgBIk@CWQl<Xg2
+!i10b 1
+!s108 1504530487.110000
+!s90 -reportprogress|300|E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_lib_pkg_hpfir.vhd|
+!s107 E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_lib_pkg_hpfir.vhd|
+Pauk_dspip_math_pkg_hpfir
+R17
+R5
+R6
+R2
+R1
+Z28 8E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_math_pkg_hpfir.vhd
+Z29 FE:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_math_pkg_hpfir.vhd
+l0
+L54
+VUmiNfbk=dUE>id[0TliZd2
+R9
+32
+b1
+Z30 !s108 1504530486.920000
+Z31 !s90 -reportprogress|300|E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_math_pkg_hpfir.vhd|
+Z32 !s107 E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_math_pkg_hpfir.vhd|
+R13
+!s100 GlH[CN>ISbN0k?204PBjF1
+!i10b 1
+Bbody
+R15
+R17
+R5
+R6
+l0
+L131
+V[LPGXXf`P7=@Q26ioi[fL3
+R9
+32
+R30
+R31
+R32
+R13
+nbody
+!s100 e8T_@B_WY1l_0mWS7M2ER3
+!i10b 1
+Eauk_dspip_roundsat_hpfir
+R2
+R17
+R5
+R6
+R1
+Z33 8E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_roundsat_hpfir.vhd
+Z34 FE:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_roundsat_hpfir.vhd
+l0
+L39
+VbCbObXN9Ff::>24^BG2]20
+R9
+32
+Z35 !s108 1504530488.028000
+Z36 !s90 -reportprogress|300|E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_roundsat_hpfir.vhd|
+Z37 !s107 E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_roundsat_hpfir.vhd|
+R13
+!s100 MTFVel;]g54IPMz7aW[f82
+!i10b 1
+Abeh
+R17
+R5
+R6
+DEx4 work 24 auk_dspip_roundsat_hpfir 0 22 bCbObXN9Ff::>24^BG2]20
+l66
+L57
+V19GV]CTY`BCkeQH:PMJlL3
+R9
+32
+R35
+R36
+R37
+R13
+!s100 P<CBf[n_IVB3WDF=>nNJg0
+!i10b 1
+Edspba_delay
+R2
+Z38 DPx4 work 21 dspba_library_package 0 22 gbE?aCXjF7lFB5fc7I@X42
+R5
+R6
+R1
+Z39 8E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/dspba_library.vhd
+Z40 FE:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/dspba_library.vhd
+l0
+L17
+VLnz3cZ]VjEg79ERW[Z[dQ2
+R9
+32
+Z41 !s108 1504530488.501000
+Z42 !s90 -reportprogress|300|E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/dspba_library.vhd|
+Z43 !s107 E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/dspba_library.vhd|
+R13
+!s100 X1Ico]fCjd6CFCeda0g^^0
+!i10b 1
+Adelay
+R38
+R5
+R6
+DEx4 work 11 dspba_delay 0 22 Lnz3cZ]VjEg79ERW[Z[dQ2
+l35
+L32
+VdjFLIl_Tfb0K:]UVPAba20
+R9
+32
+R41
+R42
+R43
+R13
+!s100 mK7Bl;9;?n5ZP_PV<H@@X2
+!i10b 1
+Pdspba_library_package
+R5
+R6
+R2
+R1
+8E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/dspba_library_package.vhd
+FE:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/dspba_library_package.vhd
+l0
+L16
+VgbE?aCXjF7lFB5fc7I@X42
+R9
+32
+R13
+!s100 fE9o]7Fz]zk7I7BbVSlGN2
+!i10b 1
+!s108 1504530488.336000
+!s90 -reportprogress|300|E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/dspba_library_package.vhd|
+!s107 E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/dspba_library_package.vhd|
+vmcic
+IgbTFDF6c??ZWbkJf]Cn;T2
+VP<VLHjbElb`7]TzcoZz<X0
+R1
+w1504271095
+8E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mcic.vo
+FE:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mcic.vo
+L0 31
+R3
+r1
+31
+Z44 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z45 !s92 -vlog01compat -work work +incdir+E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 4RXKdGaIzmo[^RRcWfL?U1
+!s85 0
+!s108 1504530490.317000
+!s107 E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mcic.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver|E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mcic.vo|
+vmDSP
+I31^817hIcf42AS:nSjfP91
+VQJ9Dj:5_CYXYa;X;@P45W2
+R1
+w1504525016
+8E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v
+FE:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v
+L0 8
+R3
+r1
+31
+R44
+R45
+nm@d@s@p
+!i10b 1
+!s100 8KTA9=e;I0XNXbBGJeb9R2
+!s85 0
+!s108 1504530490.923000
+!s107 E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver|E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v|
+Emfir
+R2
+R5
+R6
+R1
+Z46 8E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/mfir.vhd
+Z47 FE:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/mfir.vhd
+l0
+L4
+VT8j:h6OaWPKZ>9^@A8hYL0
+R9
+32
+Z48 !s108 1504530489.559000
+Z49 !s90 -reportprogress|300|E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/mfir.vhd|
+Z50 !s107 E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/mfir.vhd|
+R13
+!s100 WiKKc>lgd5FRKXRaeOC5]2
+!i10b 1
+Asyn
+R5
+R6
+Z51 DEx4 work 4 mfir 0 22 T8j:h6OaWPKZ>9^@A8hYL0
+l38
+L17
+VDLCF=ko[7lSL4I5DR2dHZ0
+R9
+32
+R48
+R49
+R50
+R13
+!s100 fR9aOnzTZ4T6lOBCVjMk?1
+!i10b 1
+Emfir_ast
+R2
+R15
+R16
+R17
+R5
+R6
+R1
+Z52 8E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/mfir_ast.vhd
+Z53 FE:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/mfir_ast.vhd
+l0
+L22
+Va3VPdEeEB?ohzIYIX7C132
+R9
+32
+Z54 !s108 1504530489.337000
+Z55 !s90 -reportprogress|300|E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/mfir_ast.vhd|
+Z56 !s107 E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/mfir_ast.vhd|
+R13
+!s100 WCaNZYM[iiLWj`P88MOAU1
+!i10b 1
+Astruct
+R15
+R16
+R17
+R5
+R6
+DEx4 work 8 mfir_ast 0 22 a3VPdEeEB?ohzIYIX7C132
+l111
+L66
+V^FSRbe1aNEF6?J[aJN>eU1
+R9
+32
+R54
+R55
+R56
+R13
+!s100 :3E>eKSbz87QIigd<EzhO0
+!i10b 1
+Emfir_rtl
+R2
+Z57 DPx3 lpm 14 lpm_components 0 22 hCMZ;l>h8OPa7Z[C2oemG2
+R14
+R38
+Z58 DPx4 ieee 9 math_real 0 22 :iME`dTX54_U49lJNF5JI3
+R17
+R5
+R6
+R1
+Z59 8E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/mfir_rtl.vhd
+Z60 FE:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/mfir_rtl.vhd
+l0
+L34
+VKVihK:FW4ID:X11:;[`gA0
+R9
+32
+Z61 !s108 1504530489.046000
+Z62 !s90 -reportprogress|300|E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/mfir_rtl.vhd|
+Z63 !s107 E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/mfir_rtl.vhd|
+R13
+!s100 ah4<W72nIBNDi3Be9dLbi2
+!i10b 1
+Anormal
+R57
+R14
+R38
+R58
+R17
+R5
+R6
+DEx4 work 8 mfir_rtl 0 22 KVihK:FW4ID:X11:;[`gA0
+l215
+L47
+VELgW:RSk<Wj6a3l<8bf1]3
+R9
+32
+R61
+R62
+R63
+R13
+!s100 iFClOFFV;]9i7W?l5aPOG3
+!i10b 1
+Emfir_tb
+R2
+R17
+R5
+R6
+R1
+Z64 8E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/mfir_tb.vhd
+Z65 FE:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/mfir_tb.vhd
+l0
+L32
+VlcV4C4_bOV6l8Lf0HmPP;1
+R9
+32
+Z66 !s108 1504530489.800000
+Z67 !s90 -reportprogress|300|E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/mfir_tb.vhd|
+Z68 !s107 E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/mfir_tb.vhd|
+R13
+!s100 ODjmClgfRN`<?jG;zlRhN1
+!i10b 1
+Artl
+R51
+R17
+R5
+R6
+DEx4 work 7 mfir_tb 0 22 lcV4C4_bOV6l8Lf0HmPP;1
+l99
+L68
+VnQLVSR6ZZF@E3]<k;BQJM3
+R9
+32
+R66
+R67
+R68
+R13
+!s100 bz6E9::n`_:Y4`NX`2Cca2
+!i10b 1
+vmnco
+IeK;gNaW66PGVnRQkUeIHf3
+VjAZabbnE9H>>fNe1DCehE0
+R1
+w1504270925
+8E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mnco.vo
+FE:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mnco.vo
+L0 31
+R3
+r1
+31
+R44
+R45
+!i10b 1
+!s100 8I8CK:T9W96WJM^>>B1fF2
+!s85 0
+!s108 1504530490.040000
+!s107 E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mnco.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver|E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mnco.vo|
+vmultiply
+IanBfDHeQQceF@Bf[1E]Fk0
+Va4`Ihj:d`6kT0l]zAQNA12
+R1
+w1504438682
+8E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/multiply.v
+FE:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/multiply.v
+L0 2
+R3
+r1
+31
+R44
+R45
+!i10b 1
+!s100 [zWN8`YUY3hBO3MPJNfTC1
+!s85 0
+!s108 1504530490.779000
+!s107 E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/multiply.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver|E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/multiply.v|
+vSDRreceiver
+IHncmeZ@44iAm1B`24heIk2
+V?:A[hk6m^3H5IT8RgA5EK1
+R1
+w1504525033
+8E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/SDRreceiver.v
+FE:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/SDRreceiver.v
+L0 14
+R3
+r1
+31
+R44
+R45
+n@s@d@rreceiver
+!i10b 1
+!s100 MIE]2jZ>:?aQ500OklJBO3
+!s85 0
+!s108 1504530490.607000
+!s107 E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/SDRreceiver.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver|E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/SDRreceiver.v|
+vSDRreceiver_vlg_tst
+IIW>ZO^TbCTD`C0nn:m`^61
+V?ZHA]SR?I8bMjTE18F]nH0
+R1
+w1504525914
+8E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/simulation/modelsim/SDRreceiver.vt
+FE:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/simulation/modelsim/SDRreceiver.vt
+L0 28
+R3
+r1
+31
+R44
+n@s@d@rreceiver_vlg_tst
+!i10b 1
+!s100 F@mN3iY2BB5[oBhW=CDLV0
+!s85 0
+!s108 1504530491.060000
+!s107 E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/simulation/modelsim/SDRreceiver.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/simulation/modelsim|E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/simulation/modelsim/SDRreceiver.vt|
+!s92 -vlog01compat -work work +incdir+E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/simulation/modelsim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

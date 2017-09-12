@@ -1,0 +1,1940 @@
+# Reading D:/software/modeltech_10.1a/tcl/vsim/pref.tcl 
+# //  ModelSim SE 10.1a Feb 22 2012 
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do SDRreceiver_run_msim_rtl_verilog.do 
+# if ![file isdirectory SDRreceiver_iputf_libs] {
+# 	file mkdir SDRreceiver_iputf_libs
+# }
+# 
+# vmap altera_ver D:/software/modeltech_10.1a/mylibrary/verilog_libs/altera_ver
+# Modifying D:\software\modeltech_10.1a\win32/../modelsim.ini
+# vmap lpm_ver D:/software/modeltech_10.1a/mylibrary/verilog_libs/lpm_ver
+# Modifying D:\software\modeltech_10.1a\win32/../modelsim.ini
+# vmap sgate_ver D:/software/modeltech_10.1a/mylibrary/verilog_libs/sgate_ver
+# Modifying D:\software\modeltech_10.1a\win32/../modelsim.ini
+# vmap altera_mf_ver D:/software/modeltech_10.1a/mylibrary/verilog_libs/altera_mf_ver
+# Modifying D:\software\modeltech_10.1a\win32/../modelsim.ini
+# vmap altera_lnsim_ver D:/software/modeltech_10.1a/mylibrary/verilog_libs/altera_lnsim_ver
+# Modifying D:\software\modeltech_10.1a\win32/../modelsim.ini
+# vmap cycloneive_ver D:/software/modeltech_10.1a/mylibrary/verilog_libs/cycloneive_ver
+# Modifying D:\software\modeltech_10.1a\win32/../modelsim.ini
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying D:\software\modeltech_10.1a\win32/../modelsim.ini
+# 
+###### Libraries for IPUTF cores 
+###### End libraries for IPUTF cores 
+###### MIF file copy and HDL compilation commands for IPUTF cores 
+# 
+# 
+# vlog "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/altera_avalon_sc_fifo.v"                        
+# Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+# -- Compiling module altera_avalon_sc_fifo
+# 
+# Top level modules:
+# 	altera_avalon_sc_fifo
+# vcom "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_math_pkg_hpfir.vhd"                   
+# Model Technology ModelSim SE vcom 10.1a Compiler 2012.02 Feb 22 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package auk_dspip_math_pkg_hpfir
+# -- Compiling package body auk_dspip_math_pkg_hpfir
+# -- Loading package auk_dspip_math_pkg_hpfir
+# vcom "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_lib_pkg_hpfir.vhd"                    
+# Model Technology ModelSim SE vcom 10.1a Compiler 2012.02 Feb 22 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg_hpfir
+# -- Compiling package auk_dspip_lib_pkg_hpfir
+# vcom "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd"
+# Model Technology ModelSim SE vcom 10.1a Compiler 2012.02 Feb 22 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity auk_dspip_avalon_streaming_controller_hpfir
+# -- Compiling architecture struct of auk_dspip_avalon_streaming_controller_hpfir
+# vcom "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd"      
+# Model Technology ModelSim SE vcom 10.1a Compiler 2012.02 Feb 22 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg_hpfir
+# -- Loading package auk_dspip_lib_pkg_hpfir
+# -- Loading package altera_mf_components
+# -- Compiling entity auk_dspip_avalon_streaming_sink_hpfir
+# -- Compiling architecture rtl of auk_dspip_avalon_streaming_sink_hpfir
+# ** Warning: [5] E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(113): Nonresolved signal 'sink_next_state' may have multiple sources.
+#   Drivers:
+#     E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(177):Process sink_comb_update_1
+#        Driven at:
+#           E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(183)
+#     E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(272):Process sink_comb_update_2
+#        Driven at:
+#           E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(279)
+# vcom "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_source_hpfir.vhd"    
+# Model Technology ModelSim SE vcom 10.1a Compiler 2012.02 Feb 22 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_mf_components
+# -- Loading package auk_dspip_math_pkg_hpfir
+# -- Compiling entity auk_dspip_avalon_streaming_source_hpfir
+# -- Compiling architecture rtl of auk_dspip_avalon_streaming_source_hpfir
+# ** Warning: [5] E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(122): Nonresolved signal 'count_finished' may have multiple sources.
+#   Drivers:
+#     E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(206):Conditional signal assignment line__205
+#     E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(217):Conditional signal assignment line__216
+# ** Warning: [5] E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(123): Nonresolved signal 'count_started' may have multiple sources.
+#   Drivers:
+#     E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(210):Conditional signal assignment line__209
+#     E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(219):Conditional signal assignment line__218
+# vcom "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_roundsat_hpfir.vhd"                   
+# Model Technology ModelSim SE vcom 10.1a Compiler 2012.02 Feb 22 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity auk_dspip_roundsat_hpfir
+# -- Compiling architecture beh of auk_dspip_roundsat_hpfir
+# vcom "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/dspba_library_package.vhd"                      
+# Model Technology ModelSim SE vcom 10.1a Compiler 2012.02 Feb 22 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package dspba_library_package
+# vcom "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/dspba_library.vhd"                              
+# Model Technology ModelSim SE vcom 10.1a Compiler 2012.02 Feb 22 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package dspba_library_package
+# -- Compiling entity dspba_delay
+# -- Compiling architecture delay of dspba_delay
+# vcom "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/mfir_rtl.vhd"                                   
+# Model Technology ModelSim SE vcom 10.1a Compiler 2012.02 Feb 22 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package dspba_library_package
+# -- Loading package altera_mf_components
+# -- Loading package LPM_COMPONENTS
+# -- Compiling entity mfir_rtl
+# -- Compiling architecture normal of mfir_rtl
+# vcom "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/mfir_ast.vhd"                                   
+# Model Technology ModelSim SE vcom 10.1a Compiler 2012.02 Feb 22 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg_hpfir
+# -- Loading package auk_dspip_lib_pkg_hpfir
+# -- Compiling entity mfir_ast
+# -- Compiling architecture struct of mfir_ast
+# vcom "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/mfir.vhd"                                       
+# Model Technology ModelSim SE vcom 10.1a Compiler 2012.02 Feb 22 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mfir
+# -- Compiling architecture syn of mfir
+# vcom "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/mfir_tb.vhd"                                    
+# Model Technology ModelSim SE vcom 10.1a Compiler 2012.02 Feb 22 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mfir_tb
+# -- Compiling architecture rtl of mfir_tb
+# -- Loading entity mfir
+# 
+# vlog -vlog01compat -work work +incdir+E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver {E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mnco.vo}
+# Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+# -- Compiling module mnco
+# 
+# Top level modules:
+# 	mnco
+# vlog -vlog01compat -work work +incdir+E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver {E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mcic.vo}
+# Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+# -- Compiling module mcic
+# 
+# Top level modules:
+# 	mcic
+# vlog -vlog01compat -work work +incdir+E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver {E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/SDRreceiver.v}
+# Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+# -- Compiling module SDRreceiver
+# 
+# Top level modules:
+# 	SDRreceiver
+# vlog -vlog01compat -work work +incdir+E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver {E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/multiply.v}
+# Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+# -- Compiling module multiply
+# 
+# Top level modules:
+# 	multiply
+# vlog -vlog01compat -work work +incdir+E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver {E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v}
+# Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+# -- Compiling module mDSP
+# 
+# Top level modules:
+# 	mDSP
+# 
+# vlog -vlog01compat -work work +incdir+E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/simulation/modelsim {E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/simulation/modelsim/SDRreceiver.vt}
+# Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+# -- Compiling module SDRreceiver_vlg_tst
+# 
+# Top level modules:
+# 	SDRreceiver_vlg_tst
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  SDRreceiver_vlg_tst
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps SDRreceiver_vlg_tst 
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# ** Warning: E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mnco.vo(6069): (vopt-2685) [TFMPC] - Too few port connections for 'n1OO'.  Expected 15, found 14.
+# 
+# ** Warning: E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mnco.vo(6069): (vopt-2718) [TFMPC] - Missing connection for port 'eq'.
+# 
+# ** Warning: E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v(38): (vopt-2685) [TFMPC] - Too few port connections for 'u_mnco'.  Expected 7, found 6.
+# 
+# ** Warning: E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v(38): (vopt-2718) [TFMPC] - Missing connection for port 'out_valid'.
+# 
+# ** Warning: E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v(75): (vopt-2685) [TFMPC] - Too few port connections for 'u_i_mcic'.  Expected 11, found 8.
+# 
+# ** Warning: E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v(75): (vopt-2718) [TFMPC] - Missing connection for port 'out_valid'.
+# 
+# ** Warning: E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v(75): (vopt-2718) [TFMPC] - Missing connection for port 'out_error'.
+# 
+# ** Warning: E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v(75): (vopt-2718) [TFMPC] - Missing connection for port 'in_ready'.
+# 
+# ** Warning: E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v(88): (vopt-2685) [TFMPC] - Too few port connections for 'u_q_mcic'.  Expected 11, found 8.
+# 
+# ** Warning: E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v(88): (vopt-2718) [TFMPC] - Missing connection for port 'out_valid'.
+# 
+# ** Warning: E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v(88): (vopt-2718) [TFMPC] - Missing connection for port 'out_error'.
+# 
+# ** Warning: E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v(88): (vopt-2718) [TFMPC] - Missing connection for port 'in_ready'.
+# 
+# Loading work.SDRreceiver_vlg_tst(fast)
+# Loading work.SDRreceiver(fast)
+# Loading work.mDSP(fast)
+# Loading work.mnco(fast)
+# Loading altera_mf_ver.altshift_taps(fast)
+# Loading lpm_ver.lpm_add_sub(fast)
+# Loading lpm_ver.lpm_add_sub(fast__1)
+# Loading lpm_ver.lpm_add_sub(fast__2)
+# Loading lpm_ver.lpm_counter(fast)
+# Loading sgate_ver.oper_add(fast)
+# Loading lpm_ver.lpm_add_sub(fast__3)
+# Loading sgate_ver.oper_add(fast__1)
+# Loading lpm_ver.lpm_add_sub(fast__4)
+# Loading sgate_ver.oper_add(fast__2)
+# Loading lpm_ver.lpm_add_sub(fast__5)
+# Loading sgate_ver.oper_mux(fast)
+# Loading work.multiply(fast)
+# Loading work.mcic(fast)
+# Loading lpm_ver.lpm_add_sub(fast__6)
+# Loading lpm_ver.lpm_add_sub(fast__7)
+# Loading lpm_ver.lpm_add_sub(fast__8)
+# Loading lpm_ver.lpm_add_sub(fast__9)
+# Loading lpm_ver.lpm_add_sub(fast__10)
+# Loading lpm_ver.lpm_add_sub(fast__11)
+# Loading lpm_ver.lpm_add_sub(fast__12)
+# Loading lpm_ver.lpm_add_sub(fast__13)
+# Loading lpm_ver.lpm_add_sub(fast__14)
+# Loading sgate_ver.oper_add(fast__3)
+# Loading lpm_ver.lpm_add_sub(fast__15)
+# Loading sgate_ver.oper_add(fast__4)
+# Loading lpm_ver.lpm_add_sub(fast__16)
+# Loading sgate_ver.oper_add(fast__5)
+# Loading lpm_ver.lpm_add_sub(fast__17)
+# Loading sgate_ver.oper_add(fast__6)
+# Loading lpm_ver.lpm_add_sub(fast__18)
+# Loading sgate_ver.oper_less_than(fast)
+# Loading sgate_ver.oper_selector(fast)
+# Loading sgate_ver.oper_selector(fast__1)
+# Loading altera_mf_ver.scfifo(fast)
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES(fast)
+# Loading altera_mf_ver.scfifo(fast__1)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.mfir(syn)#1
+# Loading ieee.numeric_std(body)
+# Loading work.auk_dspip_math_pkg_hpfir(body)
+# Loading work.auk_dspip_lib_pkg_hpfir
+# Loading work.mfir_ast(struct)#1
+# Loading altera_mf.altera_mf_components
+# Loading work.auk_dspip_avalon_streaming_sink_hpfir(rtl)#1
+# Loading work.auk_dspip_avalon_streaming_source_hpfir(rtl)#1
+# Loading ieee.std_logic_arith(body)
+# Loading work.auk_dspip_avalon_streaming_controller_hpfir(struct)#1
+# Loading ieee.math_real(body)
+# Loading work.dspba_library_package
+# Loading lpm.lpm_components
+# Loading work.mfir_rtl(normal)#1
+# Loading work.dspba_delay(delay)#1
+# Loading work.dspba_delay(delay)#2
+# Loading work.dspba_delay(delay)#3
+# Loading work.dspba_delay(delay)#4
+# Loading work.dspba_delay(delay)#5
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)#1
+# Loading work.dspba_delay(delay)#6
+# Loading lpm.lpm_hint_evaluation(body)
+# Loading lpm.lpm_mult(lpm_syn)#1
+# Loading work.dspba_delay(delay)#7
+# Loading work.auk_dspip_roundsat_hpfir(beh)#1
+# ** Warning: (vsim-3017) E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mnco.vo(6069): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /SDRreceiver_vlg_tst/i1/u_mDSP/u_mnco/n1OO
+# ** Warning: (vsim-3722) E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mnco.vo(6069): [TFMPC] - Missing connection for port 'eq'.
+# 
+# ** Warning: (vsim-8822) E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v(103): [TFMPC] - Missing Verilog connection for formal VHDL port 'ast_source_valid'.
+# 
+#         Region: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir
+# ** Warning: (vsim-8822) E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v(103): [TFMPC] - Missing Verilog connection for formal VHDL port 'ast_source_error'.
+# 
+#         Region: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir
+# ** Warning: (vsim-8822) E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v(113): [TFMPC] - Missing Verilog connection for formal VHDL port 'ast_source_valid'.
+# 
+#         Region: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir
+# ** Warning: (vsim-8822) E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v(113): [TFMPC] - Missing Verilog connection for formal VHDL port 'ast_source_error'.
+# 
+#         Region: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir
+# 
+# add wave *
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 20001 of file "GenerateAM.txt". (Current address [20001], address range [1:20000])    : E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/simulation/modelsim/SDRreceiver.vt(111)
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Note: $finish    : E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/simulation/modelsim/SDRreceiver.vt(83)
+#    Time: 1000100 ns  Iteration: 0  Instance: /SDRreceiver_vlg_tst
+# 1
+# Break in Task task_reset at E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/simulation/modelsim/SDRreceiver.vt line 83
+# Simulation Breakpoint: 1
+# Break in Task task_reset at E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/simulation/modelsim/SDRreceiver.vt line 83
+# MACRO ./SDRreceiver_run_msim_rtl_verilog.do PAUSED at line 51
+restart
+# Loading work.SDRreceiver_vlg_tst(fast)
+# Loading work.SDRreceiver(fast)
+# Loading work.mDSP(fast)
+# Loading work.mnco(fast)
+# Loading altera_mf_ver.altshift_taps(fast)
+# Loading lpm_ver.lpm_add_sub(fast)
+# Loading lpm_ver.lpm_add_sub(fast__1)
+# Loading lpm_ver.lpm_add_sub(fast__2)
+# Loading lpm_ver.lpm_counter(fast)
+# Loading sgate_ver.oper_add(fast)
+# Loading lpm_ver.lpm_add_sub(fast__3)
+# Loading sgate_ver.oper_add(fast__1)
+# Loading lpm_ver.lpm_add_sub(fast__4)
+# Loading sgate_ver.oper_add(fast__2)
+# Loading lpm_ver.lpm_add_sub(fast__5)
+# Loading sgate_ver.oper_mux(fast)
+# Loading work.multiply(fast)
+# Loading work.mcic(fast)
+# Loading lpm_ver.lpm_add_sub(fast__6)
+# Loading lpm_ver.lpm_add_sub(fast__7)
+# Loading lpm_ver.lpm_add_sub(fast__8)
+# Loading lpm_ver.lpm_add_sub(fast__9)
+# Loading lpm_ver.lpm_add_sub(fast__10)
+# Loading lpm_ver.lpm_add_sub(fast__11)
+# Loading lpm_ver.lpm_add_sub(fast__12)
+# Loading lpm_ver.lpm_add_sub(fast__13)
+# Loading lpm_ver.lpm_add_sub(fast__14)
+# Loading sgate_ver.oper_add(fast__3)
+# Loading lpm_ver.lpm_add_sub(fast__15)
+# Loading sgate_ver.oper_add(fast__4)
+# Loading lpm_ver.lpm_add_sub(fast__16)
+# Loading sgate_ver.oper_add(fast__5)
+# Loading lpm_ver.lpm_add_sub(fast__17)
+# Loading sgate_ver.oper_add(fast__6)
+# Loading lpm_ver.lpm_add_sub(fast__18)
+# Loading sgate_ver.oper_less_than(fast)
+# Loading sgate_ver.oper_selector(fast)
+# Loading sgate_ver.oper_selector(fast__1)
+# Loading altera_mf_ver.scfifo(fast)
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES(fast)
+# Loading altera_mf_ver.scfifo(fast__1)
+# ** Warning: (vsim-3017) E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mnco.vo(6069): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /SDRreceiver_vlg_tst/i1/u_mDSP/u_mnco/n1OO
+# ** Warning: (vsim-3722) E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mnco.vo(6069): [TFMPC] - Missing connection for port 'eq'.
+# 
+# ** Warning: (vsim-8822) E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v(103): [TFMPC] - Missing Verilog connection for formal VHDL port 'ast_source_valid'.
+# 
+#         Region: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir
+# ** Warning: (vsim-8822) E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v(103): [TFMPC] - Missing Verilog connection for formal VHDL port 'ast_source_error'.
+# 
+#         Region: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir
+# ** Warning: (vsim-8822) E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v(113): [TFMPC] - Missing Verilog connection for formal VHDL port 'ast_source_valid'.
+# 
+#         Region: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir
+# ** Warning: (vsim-8822) E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v(113): [TFMPC] - Missing Verilog connection for formal VHDL port 'ast_source_error'.
+# 
+#         Region: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir
+do SDRreceiver_run_msim_rtl_verilog.do
+# transcript on
+# if ![file isdirectory SDRreceiver_iputf_libs] {
+# 	file mkdir SDRreceiver_iputf_libs
+# }
+# 
+# vmap altera_ver D:/software/modeltech_10.1a/mylibrary/verilog_libs/altera_ver
+# Modifying D:\software\modeltech_10.1a\win32/../modelsim.ini
+# vmap lpm_ver D:/software/modeltech_10.1a/mylibrary/verilog_libs/lpm_ver
+# Modifying D:\software\modeltech_10.1a\win32/../modelsim.ini
+# vmap sgate_ver D:/software/modeltech_10.1a/mylibrary/verilog_libs/sgate_ver
+# Modifying D:\software\modeltech_10.1a\win32/../modelsim.ini
+# vmap altera_mf_ver D:/software/modeltech_10.1a/mylibrary/verilog_libs/altera_mf_ver
+# Modifying D:\software\modeltech_10.1a\win32/../modelsim.ini
+# vmap altera_lnsim_ver D:/software/modeltech_10.1a/mylibrary/verilog_libs/altera_lnsim_ver
+# Modifying D:\software\modeltech_10.1a\win32/../modelsim.ini
+# vmap cycloneive_ver D:/software/modeltech_10.1a/mylibrary/verilog_libs/cycloneive_ver
+# Modifying D:\software\modeltech_10.1a\win32/../modelsim.ini
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is lmj@LMJ-PC.
+# 
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# 
+# vmap work rtl_work
+# Modifying D:\software\modeltech_10.1a\win32/../modelsim.ini
+# 
+###### Libraries for IPUTF cores 
+###### End libraries for IPUTF cores 
+###### MIF file copy and HDL compilation commands for IPUTF cores 
+# 
+# 
+# vlog "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/altera_avalon_sc_fifo.v"                        
+# Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+# -- Compiling module altera_avalon_sc_fifo
+# 
+# Top level modules:
+# 	altera_avalon_sc_fifo
+# vcom "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_math_pkg_hpfir.vhd"                   
+# Model Technology ModelSim SE vcom 10.1a Compiler 2012.02 Feb 22 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package auk_dspip_math_pkg_hpfir
+# -- Compiling package body auk_dspip_math_pkg_hpfir
+# -- Loading package auk_dspip_math_pkg_hpfir
+# vcom "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_lib_pkg_hpfir.vhd"                    
+# Model Technology ModelSim SE vcom 10.1a Compiler 2012.02 Feb 22 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg_hpfir
+# -- Compiling package auk_dspip_lib_pkg_hpfir
+# vcom "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd"
+# Model Technology ModelSim SE vcom 10.1a Compiler 2012.02 Feb 22 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity auk_dspip_avalon_streaming_controller_hpfir
+# -- Compiling architecture struct of auk_dspip_avalon_streaming_controller_hpfir
+# vcom "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd"      
+# Model Technology ModelSim SE vcom 10.1a Compiler 2012.02 Feb 22 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg_hpfir
+# -- Loading package auk_dspip_lib_pkg_hpfir
+# -- Loading package altera_mf_components
+# -- Compiling entity auk_dspip_avalon_streaming_sink_hpfir
+# -- Compiling architecture rtl of auk_dspip_avalon_streaming_sink_hpfir
+# ** Warning: [5] E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(113): Nonresolved signal 'sink_next_state' may have multiple sources.
+#   Drivers:
+#     E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(177):Process sink_comb_update_1
+#        Driven at:
+#           E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(183)
+#     E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(272):Process sink_comb_update_2
+#        Driven at:
+#           E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(279)
+# vcom "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_source_hpfir.vhd"    
+# Model Technology ModelSim SE vcom 10.1a Compiler 2012.02 Feb 22 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_mf_components
+# -- Loading package auk_dspip_math_pkg_hpfir
+# -- Compiling entity auk_dspip_avalon_streaming_source_hpfir
+# -- Compiling architecture rtl of auk_dspip_avalon_streaming_source_hpfir
+# ** Warning: [5] E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(122): Nonresolved signal 'count_finished' may have multiple sources.
+#   Drivers:
+#     E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(206):Conditional signal assignment line__205
+#     E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(217):Conditional signal assignment line__216
+# ** Warning: [5] E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(123): Nonresolved signal 'count_started' may have multiple sources.
+#   Drivers:
+#     E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(210):Conditional signal assignment line__209
+#     E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(219):Conditional signal assignment line__218
+# vcom "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/auk_dspip_roundsat_hpfir.vhd"                   
+# Model Technology ModelSim SE vcom 10.1a Compiler 2012.02 Feb 22 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity auk_dspip_roundsat_hpfir
+# -- Compiling architecture beh of auk_dspip_roundsat_hpfir
+# vcom "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/dspba_library_package.vhd"                      
+# Model Technology ModelSim SE vcom 10.1a Compiler 2012.02 Feb 22 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package dspba_library_package
+# vcom "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/dspba_library.vhd"                              
+# Model Technology ModelSim SE vcom 10.1a Compiler 2012.02 Feb 22 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package dspba_library_package
+# -- Compiling entity dspba_delay
+# -- Compiling architecture delay of dspba_delay
+# vcom "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/mfir_rtl.vhd"                                   
+# Model Technology ModelSim SE vcom 10.1a Compiler 2012.02 Feb 22 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package dspba_library_package
+# -- Loading package altera_mf_components
+# -- Loading package LPM_COMPONENTS
+# -- Compiling entity mfir_rtl
+# -- Compiling architecture normal of mfir_rtl
+# vcom "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/mfir_ast.vhd"                                   
+# Model Technology ModelSim SE vcom 10.1a Compiler 2012.02 Feb 22 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg_hpfir
+# -- Loading package auk_dspip_lib_pkg_hpfir
+# -- Compiling entity mfir_ast
+# -- Compiling architecture struct of mfir_ast
+# vcom "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/mfir.vhd"                                       
+# Model Technology ModelSim SE vcom 10.1a Compiler 2012.02 Feb 22 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mfir
+# -- Compiling architecture syn of mfir
+# vcom "E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mfir_sim/mfir_tb.vhd"                                    
+# Model Technology ModelSim SE vcom 10.1a Compiler 2012.02 Feb 22 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mfir_tb
+# -- Compiling architecture rtl of mfir_tb
+# -- Loading entity mfir
+# 
+# vlog -vlog01compat -work work +incdir+E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver {E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mnco.vo}
+# Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+# -- Compiling module mnco
+# 
+# Top level modules:
+# 	mnco
+# vlog -vlog01compat -work work +incdir+E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver {E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mcic.vo}
+# Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+# -- Compiling module mcic
+# 
+# Top level modules:
+# 	mcic
+# vlog -vlog01compat -work work +incdir+E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver {E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/SDRreceiver.v}
+# Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+# -- Compiling module SDRreceiver
+# 
+# Top level modules:
+# 	SDRreceiver
+# vlog -vlog01compat -work work +incdir+E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver {E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/multiply.v}
+# Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+# -- Compiling module multiply
+# 
+# Top level modules:
+# 	multiply
+# vlog -vlog01compat -work work +incdir+E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver {E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v}
+# Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+# -- Compiling module mDSP
+# 
+# Top level modules:
+# 	mDSP
+# 
+# vlog -vlog01compat -work work +incdir+E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/simulation/modelsim {E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/simulation/modelsim/SDRreceiver.vt}
+# Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+# -- Compiling module SDRreceiver_vlg_tst
+# 
+# Top level modules:
+# 	SDRreceiver_vlg_tst
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  SDRreceiver_vlg_tst
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps SDRreceiver_vlg_tst 
+# Loading work.SDRreceiver_vlg_tst(fast)
+# Loading work.SDRreceiver(fast)
+# Loading work.mDSP(fast)
+# Loading work.mnco(fast)
+# Loading altera_mf_ver.altshift_taps(fast)
+# Loading lpm_ver.lpm_add_sub(fast)
+# Loading lpm_ver.lpm_add_sub(fast__1)
+# Loading lpm_ver.lpm_add_sub(fast__2)
+# Loading lpm_ver.lpm_counter(fast)
+# Loading sgate_ver.oper_add(fast)
+# Loading lpm_ver.lpm_add_sub(fast__3)
+# Loading sgate_ver.oper_add(fast__1)
+# Loading lpm_ver.lpm_add_sub(fast__4)
+# Loading sgate_ver.oper_add(fast__2)
+# Loading lpm_ver.lpm_add_sub(fast__5)
+# Loading sgate_ver.oper_mux(fast)
+# Loading work.multiply(fast)
+# Loading work.mcic(fast)
+# Loading lpm_ver.lpm_add_sub(fast__6)
+# Loading lpm_ver.lpm_add_sub(fast__7)
+# Loading lpm_ver.lpm_add_sub(fast__8)
+# Loading lpm_ver.lpm_add_sub(fast__9)
+# Loading lpm_ver.lpm_add_sub(fast__10)
+# Loading lpm_ver.lpm_add_sub(fast__11)
+# Loading lpm_ver.lpm_add_sub(fast__12)
+# Loading lpm_ver.lpm_add_sub(fast__13)
+# Loading lpm_ver.lpm_add_sub(fast__14)
+# Loading sgate_ver.oper_add(fast__3)
+# Loading lpm_ver.lpm_add_sub(fast__15)
+# Loading sgate_ver.oper_add(fast__4)
+# Loading lpm_ver.lpm_add_sub(fast__16)
+# Loading sgate_ver.oper_add(fast__5)
+# Loading lpm_ver.lpm_add_sub(fast__17)
+# Loading sgate_ver.oper_add(fast__6)
+# Loading lpm_ver.lpm_add_sub(fast__18)
+# Loading sgate_ver.oper_less_than(fast)
+# Loading sgate_ver.oper_selector(fast)
+# Loading sgate_ver.oper_selector(fast__1)
+# Loading altera_mf_ver.scfifo(fast)
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES(fast)
+# Loading altera_mf_ver.scfifo(fast__1)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.mfir(syn)#1
+# Loading ieee.numeric_std(body)
+# Loading work.auk_dspip_math_pkg_hpfir(body)
+# Loading work.auk_dspip_lib_pkg_hpfir
+# Loading work.mfir_ast(struct)#1
+# Loading altera_mf.altera_mf_components
+# Loading work.auk_dspip_avalon_streaming_sink_hpfir(rtl)#1
+# Loading work.auk_dspip_avalon_streaming_source_hpfir(rtl)#1
+# Loading ieee.std_logic_arith(body)
+# Loading work.auk_dspip_avalon_streaming_controller_hpfir(struct)#1
+# Loading ieee.math_real(body)
+# Loading work.dspba_library_package
+# Loading lpm.lpm_components
+# Loading work.mfir_rtl(normal)#1
+# Loading work.dspba_delay(delay)#1
+# Loading work.dspba_delay(delay)#2
+# Loading work.dspba_delay(delay)#3
+# Loading work.dspba_delay(delay)#4
+# Loading work.dspba_delay(delay)#5
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)#1
+# Loading work.dspba_delay(delay)#6
+# Loading lpm.lpm_hint_evaluation(body)
+# Loading lpm.lpm_mult(lpm_syn)#1
+# Loading work.dspba_delay(delay)#7
+# Loading work.auk_dspip_roundsat_hpfir(beh)#1
+# ** Warning: (vsim-3017) E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mnco.vo(6069): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /SDRreceiver_vlg_tst/i1/u_mDSP/u_mnco/n1OO
+# ** Warning: (vsim-3722) E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mnco.vo(6069): [TFMPC] - Missing connection for port 'eq'.
+# 
+# ** Warning: (vsim-8822) E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v(103): [TFMPC] - Missing Verilog connection for formal VHDL port 'ast_source_valid'.
+# 
+#         Region: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir
+# ** Warning: (vsim-8822) E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v(103): [TFMPC] - Missing Verilog connection for formal VHDL port 'ast_source_error'.
+# 
+#         Region: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir
+# ** Warning: (vsim-8822) E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v(113): [TFMPC] - Missing Verilog connection for formal VHDL port 'ast_source_valid'.
+# 
+#         Region: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir
+# ** Warning: (vsim-8822) E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/mDSP.v(113): [TFMPC] - Missing Verilog connection for formal VHDL port 'ast_source_error'.
+# 
+#         Region: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir
+# 
+# add wave *
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 20001 of file "GenerateAM.txt". (Current address [20001], address range [1:20000])    : E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/simulation/modelsim/SDRreceiver.vt(111)
+#    Time: 0 ps  Iteration: 0  Instance: /SDRreceiver_vlg_tst
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_i_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_10_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_9_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_8_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_7_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_6_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_5_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_4_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_3_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_2_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_1_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /SDRreceiver_vlg_tst/i1/u_mDSP/u_q_mfir/mfir_ast_inst/hpfircore/u0_m0_wo0_mtree_mult1_0_component
+# ** Note: $finish    : E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/simulation/modelsim/SDRreceiver.vt(83)
+#    Time: 1000100 ns  Iteration: 0  Instance: /SDRreceiver_vlg_tst
+# 1
+# Break in Task task_reset at E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/simulation/modelsim/SDRreceiver.vt line 83
+# Simulation Breakpoint: 1
+# Break in Task task_reset at E:/F/FPGAcode/SDR-radio-receiver/DE0-nano/SDRrceeiver/simulation/modelsim/SDRreceiver.vt line 83
+# MACRO ./SDRreceiver_run_msim_rtl_verilog.do PAUSED at line 51

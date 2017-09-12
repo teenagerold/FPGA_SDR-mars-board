@@ -1,0 +1,35 @@
+To,			Location
+
+//clock
+clk,			PIN_R8
+
+//adc clock
+clk_adc,		PIN_A12
+
+//reset
+rst_n,			PIN_J15
+
+//adc_data
+adc_data[0],		PIN_D6
+adc_data[1],		PIN_C6
+adc_data[2],		PIN_E6
+adc_data[3],		PIN_D8
+adc_data[4],		PIN_F8	
+adc_data[5],		PIN_E8	
+adc_data[6],		PIN_D9	
+adc_data[7],		PIN_E10
+adc_data[8],		PIN_B11
+adc_data[9],		PIN_D11
+
+//serial port rx
+serial_rx,		PIN_T14
+
+//serial port tx
+serial_tx,		PIN_R13
+
+//led for debug
+debug_led[0],		PIN_A15
+debug_led[1],		PIN_A13
+debug_led[2],		PIN_B13
+debug_led[3],		PIN_A11
+			

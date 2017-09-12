@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri Sep 08 14:26:03 2017
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : SDRreceiver
+Top-level Entity Name : SDRreceiver
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 4,651 / 22,320 ( 21 % )
+    Total combinational functions : 2,353 / 22,320 ( 11 % )
+    Dedicated logic registers : 4,579 / 22,320 ( 21 % )
+Total registers : 4579
+Total pins : 19 / 154 ( 12 % )
+Total virtual pins : 0
+Total memory bits : 378 / 608,256 ( < 1 % )
+Embedded Multiplier 9-bit elements : 48 / 132 ( 36 % )
+Total PLLs : 1 / 4 ( 25 % )
